@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page with Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Welcome to Fakhrul's World </h1>
+        <p>|Age Checking Page</p>
+    </div>
+
+    <!-- Input Field for Age -->
+    <div class="input-container">
+        <label for="age">Enter Your Age:</label>
+        <input type="number" id="age" placeholder="Enter your age">
+        <button id="button" onclick="checkAge()">Check Age</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+        <!-- Card for Age Result -->
+        <div class="card2" id="ageCard" style="display:none;">
+            <h2 id="ageResult"></h2>
+        </div>
+
+        <!-- Other Cards -->
+        <div class="card">
+    
+            <h2>First Card </h2>
+            <p> Contains The basic information about Participant </p>
+        </div>
+
+        <div class="card">
+            
+            <h2> Second Card</h2>
+            <p>Basic Info about the Competition</p>
+        </div>
+
+        <!-- Add more cards as needed -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function checkAge() {
+            var ageInput = document.getElementById("age").value;
+            var ageCard = document.getElementById("ageCard");
+            var ageResult = document.getElementById("ageResult");
+
+            if (ageInput >= 18) {
+                ageResult.innerHTML = "You are an adult.";
+            } else {
+                ageResult.innerHTML = "You are a child.";
+            }
+
+            ageCard.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
